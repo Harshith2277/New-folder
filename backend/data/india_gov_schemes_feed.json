@@ -1,0 +1,218 @@
+[
+  {
+    "id": "PM-YUVA-INTERN",
+    "name": "PM Internship Scheme in Top Companies (PM-IS)",
+    "department": "Department of Corporate Affairs",
+    "ministry": "Ministry of Corporate Affairs",
+    "stateOrCentral": "Central",
+    "state": "All-India",
+    "isNew": 1,
+    "sourceUrl": "https://pminternship.mca.gov.in",
+    "authority": "Government of India",
+    "benefitSummary": "₹5,000 monthly stipend + ₹6,000 incidentals grant for 12 months internship in top 500 companies",
+    "description": "Pilot youth internship scheme announced in Union Budget 2024 to provide 12 months exposure in top companies. Policy rule demonstration: Version 1 caps age at 24; Version 2 (effective 2026-06-01) raises age limit to 28 for diploma/ITI candidates.",
+    "effectiveDate": "2024-10-01",
+    "changeNote": "Ingested from official portal pminternship.mca.gov.in. Age 21-24, income <= 8 Lakhs, non-salaried.",
+    "requiredDocuments": [
+      { "id": "DOC-ID", "name": "Aadhaar Card", "digilockerSupported": true },
+      { "id": "DOC-EDU", "name": "Qualification Marksheet / Diploma", "digilockerSupported": true },
+      { "id": "DOC-INC", "name": "Family Income Certificate", "digilockerSupported": true }
+    ],
+    "rules": {
+      "all": [
+        { "field": "age", "operator": ">=", "value": 21, "label": "Minimum Age (21 Years)" },
+        { "field": "age", "operator": "<=", "value": 24, "label": "Maximum Age (v1 Limit 24 Years)" },
+        { "field": "annualIncome", "operator": "<=", "value": 800000, "label": "Family Income <= ₹8,00,000" },
+        { "field": "occupation", "operator": "!=", "value": "Salaried", "label": "Not Full-Time Salaried Employed" }
+      ]
+    },
+    "futureVersions": [
+      {
+        "version": 2,
+        "effectiveDate": "2026-06-01",
+        "changeNote": "Policy Amendment: Raised maximum age limit from 24 to 28 to support vocational & diploma youth.",
+        "rules": {
+          "all": [
+            { "field": "age", "operator": ">=", "value": 21, "label": "Minimum Age (21 Years)" },
+            { "field": "age", "operator": "<=", "value": 28, "label": "Maximum Age (v2 Amended Limit 28 Years)" },
+            { "field": "annualIncome", "operator": "<=", "value": 800000, "label": "Family Income <= ₹8,00,000" },
+            { "field": "occupation", "operator": "!=", "value": "Salaried", "label": "Not Full-Time Salaried Employed" }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "PM-KISAN",
+    "name": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)",
+    "department": "Department of Agriculture & Farmers Welfare",
+    "ministry": "Ministry of Agriculture and Farmers Welfare",
+    "stateOrCentral": "Central",
+    "state": "All-India",
+    "isNew": 0,
+    "sourceUrl": "https://pmkisan.gov.in",
+    "authority": "Government of India",
+    "benefitSummary": "Direct income support of ₹6,000 per year in 3 equal installments of ₹2,000 directly to bank accounts",
+    "description": "Central Sector Scheme with 100% funding from Government of India to supplement financial needs of landholding farmers' families.",
+    "effectiveDate": "2024-01-01",
+    "changeNote": "Ingested from official portal pmkisan.gov.in. Landholding and Farmer occupation verified.",
+    "requiredDocuments": [
+      { "id": "DOC-ID", "name": "Aadhaar Card", "digilockerSupported": true },
+      { "id": "DOC-LAND", "name": "Land Records (Khatauni / RTC / RoR)", "digilockerSupported": true },
+      { "id": "DOC-BANK", "name": "Aadhaar-Linked Bank Passbook Copy", "digilockerSupported": false }
+    ],
+    "rules": {
+      "all": [
+        { "field": "occupation", "operator": "==", "value": "Farmer", "label": "Farmer Occupation" },
+        { "field": "age", "operator": ">=", "value": 18, "label": "Minimum Age (18 Years)" }
+      ]
+    }
+  },
+  {
+    "id": "KA-YUVA-NIDHI",
+    "name": "Karnataka Yuva Nidhi Unemployment Allowance",
+    "department": "Department of Youth Empowerment and Sports",
+    "ministry": "Government of Karnataka",
+    "stateOrCentral": "State",
+    "state": "Karnataka",
+    "isNew": 1,
+    "sourceUrl": "https://sevasindhu.karnataka.gov.in",
+    "authority": "Government of Karnataka",
+    "benefitSummary": "₹3,000/month for degree holders and ₹1,500/month for diploma holders for up to 2 years",
+    "description": "State guarantee scheme providing monthly financial assistance to fresh graduates and diploma holders who remain unemployed after graduation.",
+    "effectiveDate": "2024-01-01",
+    "changeNote": "Ingested from official Seva Sindhu portal sevasindhu.karnataka.gov.in. Domicile Karnataka, Unemployed youth.",
+    "requiredDocuments": [
+      { "id": "DOC-ID", "name": "Aadhaar Card (Karnataka Address)", "digilockerSupported": true },
+      { "id": "DOC-EDU", "name": "Degree / Diploma Marksheet (from Karnataka Institute)", "digilockerSupported": true },
+      { "id": "DOC-INC", "name": "Income Certificate", "digilockerSupported": true }
+    ],
+    "rules": {
+      "all": [
+        { "field": "state", "operator": "==", "value": "Karnataka", "label": "Karnataka State Domicile" },
+        { "field": "occupation", "operator": "==", "value": "Unemployed", "label": "Unemployed Status" },
+        { "field": "age", "operator": ">=", "value": 18, "label": "Minimum Age (18 Years)" },
+        { "field": "age", "operator": "<=", "value": 30, "label": "Maximum Age (30 Years)" }
+      ]
+    }
+  },
+  {
+    "id": "MH-MAHASWAYAM",
+    "name": "Maharashtra MahaSwayam Youth Skill & Apprenticeship Scheme",
+    "department": "Skill Development, Employment and Entrepreneurship Department",
+    "ministry": "Government of Maharashtra",
+    "stateOrCentral": "State",
+    "state": "Maharashtra",
+    "isNew": 1,
+    "sourceUrl": "https://mahaswayam.gov.in",
+    "authority": "Government of Maharashtra",
+    "benefitSummary": "Stipend of ₹6,000 to ₹10,000/month for on-job industrial apprenticeship in Maharashtra",
+    "description": "State welfare scheme providing stipend and skill placement for Maharashtra resident youth in local industries.",
+    "effectiveDate": "2024-01-01",
+    "changeNote": "Ingested from official portal mahaswayam.gov.in. Maharashtra state domicile, youth 18-29.",
+    "requiredDocuments": [
+      { "id": "DOC-ID", "name": "Aadhaar Card", "digilockerSupported": true },
+      { "id": "DOC-EDU", "name": "HSC / ITI / Diploma Marksheet", "digilockerSupported": true },
+      { "id": "DOC-INC", "name": "Annual Family Income Certificate", "digilockerSupported": true }
+    ],
+    "rules": {
+      "all": [
+        { "field": "state", "operator": "==", "value": "Maharashtra", "label": "Maharashtra State Domicile" },
+        { "field": "age", "operator": ">=", "value": 18, "label": "Minimum Age (18 Years)" },
+        { "field": "age", "operator": "<=", "value": 29, "label": "Maximum Age (29 Years)" }
+      ]
+    }
+  },
+  {
+    "id": "PMEGP",
+    "name": "Prime Minister Employment Generation Programme (PMEGP)",
+    "department": "Khadi and Village Industries Commission (KVIC)",
+    "ministry": "Ministry of Micro, Small and Medium Enterprises",
+    "stateOrCentral": "Central",
+    "state": "All-India",
+    "isNew": 0,
+    "sourceUrl": "https://kviconline.gov.in/pmegp/pmegpweb/index.jsp",
+    "authority": "Government of India",
+    "benefitSummary": "Credit-linked subsidy program up to 35% margin money subsidy for establishing micro-enterprises in non-farm sector",
+    "description": "Major credit-linked subsidy program aimed at generating self-employment opportunities through establishment of micro-enterprises in rural as well as urban areas.",
+    "effectiveDate": "2024-04-01",
+    "changeNote": "Ingested from official portal kviconline.gov.in. Age >= 18 and self-employment focus.",
+    "requiredDocuments": [
+      { "id": "DOC-ID", "name": "Aadhaar / National ID", "digilockerSupported": true },
+      { "id": "DOC-PROJ", "name": "Detailed Project Profile / Business Proposal", "digilockerSupported": false },
+      { "id": "DOC-EDU", "name": "Educational Certificate (8th / 10th / Diploma)", "digilockerSupported": true }
+    ],
+    "rules": {
+      "all": [
+        { "field": "age", "operator": ">=", "value": 18, "label": "Minimum Age (18 Years)" },
+        {
+          "any": [
+            { "field": "occupation", "operator": "==", "value": "Unemployed", "label": "Unemployed Citizen" },
+            { "field": "occupation", "operator": "==", "value": "Self-Employed", "label": "Self-Employed Entrepreneur" }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "NSP-POST-MATRIC",
+    "name": "Post-Matric Scholarship Scheme for SC/ST/OBC Students",
+    "department": "Department of Social Justice and Empowerment",
+    "ministry": "Ministry of Social Justice and Empowerment",
+    "stateOrCentral": "Central",
+    "state": "All-India",
+    "isNew": 0,
+    "sourceUrl": "https://scholarships.gov.in",
+    "authority": "Government of India",
+    "benefitSummary": "100% compulsory non-refundable fees reimbursement + monthly maintenance allowance up to ₹13,500/year",
+    "description": "Central sector scholarship provided to eligible students pursuing post-matriculation or post-secondary courses to enable them to complete higher education.",
+    "effectiveDate": "2024-01-01",
+    "changeNote": "Ingested from official National Scholarship Portal scholarships.gov.in. Target category SC/ST/OBC and Student status.",
+    "requiredDocuments": [
+      { "id": "DOC-ID", "name": "Aadhaar / Student ID", "digilockerSupported": true },
+      { "id": "DOC-INC", "name": "Income Certificate (Competent Authority)", "digilockerSupported": true },
+      { "id": "DOC-CASTE", "name": "Category / Caste Certificate", "digilockerSupported": true },
+      { "id": "DOC-BON", "name": "Institute Bonafide & Fee Receipt", "digilockerSupported": false }
+    ],
+    "rules": {
+      "all": [
+        { "field": "occupation", "operator": "==", "value": "Student", "label": "Enrolled Student Status" },
+        { "field": "age", "operator": ">=", "value": 16, "label": "Minimum Age (16 Years)" },
+        { "field": "annualIncome", "operator": "<=", "value": 250000, "label": "Annual Family Income <= ₹2,50,000" },
+        { "field": "category", "operator": "!=", "value": "General", "label": "Reserved Category (SC / ST / OBC)" }
+      ]
+    }
+  },
+  {
+    "id": "STANDUP-INDIA",
+    "name": "Stand-Up India Scheme for Green Field Enterprises",
+    "department": "Department of Financial Services",
+    "ministry": "Ministry of Finance",
+    "stateOrCentral": "Central",
+    "state": "All-India",
+    "isNew": 0,
+    "sourceUrl": "https://www.standupmitra.in",
+    "authority": "Government of India",
+    "benefitSummary": "Bank loans between ₹10 Lakhs and ₹1 Crore for setting up greenfield enterprises in manufacturing, services, or trading",
+    "description": "Facilitates bank loans from Scheduled Commercial Banks to at least one SC or ST borrower and at least one woman borrower per bank branch.",
+    "effectiveDate": "2024-01-01",
+    "changeNote": "Ingested from official portal standupmitra.in. Age >= 18 and SC/ST or Women focus.",
+    "requiredDocuments": [
+      { "id": "DOC-ID", "name": "Aadhaar / Voter ID / PAN", "digilockerSupported": true },
+      { "id": "DOC-PROJ", "name": "Greenfield Business Project Report", "digilockerSupported": false },
+      { "id": "DOC-CASTE", "name": "Caste Certificate (for SC/ST applicants)", "digilockerSupported": true }
+    ],
+    "rules": {
+      "all": [
+        { "field": "age", "operator": ">=", "value": 18, "label": "Minimum Age (18 Years)" },
+        {
+          "any": [
+            { "field": "category", "operator": "==", "value": "SC", "label": "SC Category Applicant" },
+            { "field": "category", "operator": "==", "value": "ST", "label": "ST Category Applicant" },
+            { "field": "occupation", "operator": "==", "value": "Self-Employed", "label": "Self-Employed Entrepreneur" }
+          ]
+        }
+      ]
+    }
+  }
+]
