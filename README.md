@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Scheme
 hello!!
 =======
@@ -93,3 +94,7 @@ npm run dev
 | `PATCH` | `/api/applications/:id/status` | Update review status and officer remarks |
 | `GET` | `/api/audit-logs` | Retrieve immutable officer audit trail |
 >>>>>>> acfaec3 (okey)
+=======
+# New-folder
+hello
+>>>>>>> origin/main
